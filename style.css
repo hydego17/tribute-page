@@ -1,0 +1,202 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital@0;1&family=Lora:ital,wght@0,500;1,400&display=swap');
+
+
+* {
+    margin: 0 auto;
+    padding: 0;
+    font-size: 15px;
+}
+
+body {
+    font-family: 'Lora', serif;
+    color: white;
+    background: linear-gradient(90deg, #161616, #242424);
+}
+
+/* Static  page*/
+.static {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    padding-top: 20px;
+    height: 100%;
+    width: 700px;
+    position: fixed;
+    border-right-color: rgb(105, 86, 60);
+    border-right-style: double;
+    animation: 2s ease-out 0s 1 fadeAway;
+}
+
+@keyframes fadeAway {
+    0% {
+        opacity: 0;
+    }
+
+    50% {
+        opacity: 0.5;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+.static p {
+    margin: 1vh auto;
+    font-style: italic;
+    font-size: 0.8em;
+}
+
+h1 {
+    color: burlywood;
+    font-size: 4vmax;
+    font-family: 'Lora', serif;
+    font-style: italic;
+}
+
+#image {
+
+    display: block;
+    width: 100%;
+    padding: 10px 20px;
+    max-width: 600px;
+    transition: transform 2s;
+}
+
+#image:hover {
+    transform: scale(1.02);
+}
+
+#img-caption {
+    font-size: 0.8rem;
+    margin: 0;
+}
+
+/* Tribute-info */
+#tribute-info {
+    animation: 3s ease-out 0s 1 fadeAway;
+    margin-left: 750px;
+    /* Same as the width of the static */
+    padding: 40px 40px;
+}
+
+#tribute-info p {
+    font-size: 1.2em;
+    color: rgb(255, 207, 144);
+    animation: 3.5s ease-out 0s 1 fadeAway;
+}
+
+h2 {
+    font-size: 2em;
+    color: burlywood;
+    padding-bottom: 40px;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+a:hover {
+    color: rgb(250, 249, 200);
+    ;
+}
+
+em {
+    font-size: 1.2rem;
+    color: white;
+    letter-spacing: 1px;
+}
+
+#link {
+    margin-top: 50px;
+    padding-top: 30px;
+    font-style: italic;
+    font-family: 'Lato', sans-serif;
+}
+
+/* Responsive layout */
+@media (max-width: 1024px) {
+
+
+    .static {
+        height: 100%;
+        width: 570px;
+    }
+
+    .static p {
+        font-size: 0.7em;
+    }
+
+    #image {
+        max-width: 90%;
+    }
+
+    #img-div {
+        margin: 0;
+        padding: 0;
+    }
+
+    #img-caption {
+        font-size: 0.7em;
+    }
+
+    #tribute-info {
+        margin-left: 570px;
+        padding: 40px 20px;
+    }
+
+    #tribute-info p {
+        font-size: 1em;
+        color: rgb(255, 207, 144);
+    }
+
+    h2 {
+        font-size: 2em;
+        color: burlywood;
+        padding-bottom: 40px;
+    }
+
+
+    em {
+        font-size: 1rem;
+        color: white;
+        letter-spacing: 1px;
+    }
+}
+
+@media (max-width: 700px) {
+
+    .static {
+        padding-bottom: 4vmin;
+        height: 100%;
+        width: initial;
+        position: initial;
+        z-index: 1;
+        border-bottom-color: rgb(105, 86, 60);
+        border-bottom-style: double;
+    }
+
+    #image {
+        max-width: 80%;
+    }
+
+    #tribute-info {
+        margin: 40px 30px;
+        padding: 40px 20px;
+        border-left-style: unset;
+    }
+
+    #tribute-info #link {
+        border-top-color: rgb(105, 86, 60);
+        border-top-style: double;
+    }
+
+}
+
+@media (max-width: 650px) {
+
+    #img-caption {
+        margin: auto 50px;
+    }
+}
